@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>归档</title>
+    <title>关于我</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="./static/css/me.css">
 </head>
@@ -19,8 +19,8 @@
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini idea outline icon"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
-                <a href="#" class="active m-item item m-mobile-hide"><i class="mini copy outline icon"></i>归档</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini copy outline icon"></i>归档</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
                 <div class="right m-item item m-mobile-hide">
                     <div class="ui icon input">
                         <input type="text" placeholder="search...">
@@ -34,59 +34,51 @@
 </nav>
 
 <!--中间内容-->
-<div class="m-container-small m-padded-tb-huge">
+<div class="m-container m-padded-tb-huge">
     <div class="ui container">
-        <!--header-->
-        <div class="ui top attached padded segment m-padded-tb-large">
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <h3 class="ui teal header">归档</h3>
+        <div class="ui stackable grid">
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="https://picsum.photos/id/100/800/600" alt="" class="ui rounded image">
                 </div>
-                <div class="right aligned column">
-                    共 <h3 class="ui orange header m-inline-block m-text-thin">14</h3> 篇博客
+            </div>
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <h3 class="ui header">关于我</h3>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">陈嘉珣，一个学生，折腾在 0 和 1 世界的小弟；一个终身学习者，誓将学习无限循环. 希望结识可以共同成长的小伙伴.</p>
+                    <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...</p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label m-margin-top-small">编程</div>
+                    <div class="ui orange basic left pointing label m-margin-top-small">写作</div>
+                    <div class="ui orange basic left pointing label m-margin-top-small">思考</div>
+                    <div class="ui orange basic left pointing label m-margin-top-small">运动</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-top-small">java</div>
+                    <div class="ui teal basic left pointing label m-margin-top-small">javascript</div>
+                    <div class="ui teal basic left pointing label m-margin-top-small">react</div>
+                    <div class="ui teal basic left pointing label m-margin-top-small">node</div>
+                    <div class="ui teal basic left pointing label m-margin-top-small">mysql</div>
+                </div>
+                <div class="ui attached bottom segment">
+                    <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                    <a href="#" class="ui circular icon button"><i class="wechat icon" id="wecharQRButton"></i></a>
+                    <a href="#" class="ui circular icon button"><i class="qq icon" id="qqQRButton"></i></a>
+                </div>
+
+                <div class="ui wechatQR flowing popup transition hidden">
+                    <img src="./static/images/wechat.png" alt="" class="ui rounded image" style="width: 200px">
+                </div>
+                <div class="ui qqQR flowing popup transition hidden">
+                    <img src="./static/images/qqQR.PNG" alt="" class="ui rounded image" style="width: 200px">
                 </div>
             </div>
         </div>
-
-        <h2 class="ui centered header">2017</h2>
-        <div class="ui fluid vertical menu">
-            <a href="#" class="item">
-                <span>
-                    <i class="mini teal circle icon"></i>关于刻意练习的清单
-                    <div class="ui teal basic left pointing label m-padded-mini">9月9号</div>
-                </span>
-                <div class="ui orange basic label">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="mini teal circle icon"></i>关于刻意练习的清单
-                    <div class="ui teal basic left pointing label m-padded-mini">9月9号</div>
-                </span>
-                <div class="ui orange basic label">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="mini teal circle icon"></i>关于刻意练习的清单
-                    <div class="ui teal basic left pointing label m-padded-mini">9月9号</div>
-                </span>
-                <div class="ui orange basic label">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="mini teal circle icon"></i>关于刻意练习的清单
-                    <div class="ui teal basic left pointing label m-padded-mini">9月9号</div>
-                </span>
-                <div class="ui orange basic label">原创</div>
-            </a>
-            <a href="#" class="item">
-                <span>
-                    <i class="mini teal circle icon"></i>关于刻意练习的清单
-                    <div class="ui teal basic left pointing label m-padded-mini">9月9号</div>
-                </span>
-                <div class="ui orange basic label">原创</div>
-            </a>
-        </div>
     </div>
+
 </div>
 
 <br>
@@ -138,7 +130,16 @@
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
-</script>
 
+    $('#wecharQRButton').popup({
+        popup: $('.wechatQR.popup'),
+        position: "top center"
+    });
+
+    $('#qqQRButton').popup({
+        popup: $('.qqQR.popup'),
+        position: "top center"
+    });
+</script>
 </body>
 </html>
